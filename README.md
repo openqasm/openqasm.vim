@@ -11,7 +11,7 @@ A Vim plugin for syntax highlighting of OpenQASM files.
 
 Add the line
 ```vim
-Plugin 'Qiskit/openqasm', {'rtp': 'plugins/vim/'}
+Plugin 'openqasm/openqasm.vim'
 ```
 into your `.vimrc` between the `call vundle#begin()` and `call vundle#end()` lines, reload, and run `:PluginInstall`.
 
@@ -19,7 +19,7 @@ into your `.vimrc` between the `call vundle#begin()` and `call vundle#end()` lin
 
 Add the line
 ```vim
-Plug 'Qiskit/openqasm', {'rtp': 'plugins/vim/'}
+Plug 'openqasm/openqasm.vim'
 ```
 into your `.vimrc` between the `call plug#begin()` and `call plug#end()` lines, reload, and run `:PlugInstall`.
 
@@ -29,14 +29,14 @@ Clone this repository somewhere locally with
 
 ```bash
 $ cd <plugins path>
-$ git clone https://github.com/Qiskit/openqasm
+$ git clone https://github.com/openqasm/openqasm.vim
 ```
 
 This does not need to be in the `.vim` directory.
 Now add the plugin's subdirectory to Vim's runtime path, by adding the following to your `.vimrc`:
 
 ```vim
-set rtp+='<plugins path>/openqasm/plugins/vim'
+set rtp+='<plugins path>/openqasm.vim'
 ```
 
 Reload `.vimrc` to load the plugin.
@@ -80,5 +80,5 @@ This would be strongly dependent on the grammar file loaded by the `defcalgramma
 
 ## License
 
-openqasm.vim is licensed under the Apache 2.0 open-source license, along with the rest of the OpenQASM source.
-See the `LICENSE` file in the root of this repository for more information.
+`openqasm.vim` is licensed under the Apache 2.0 open-source license.
+See the [`LICENSE` file in the root of this repository](LICENSE) for more information.
