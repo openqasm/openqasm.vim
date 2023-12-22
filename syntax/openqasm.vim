@@ -161,6 +161,7 @@ else
     syntax keyword qasmDefine def gate defcal nextgroup=qasmFunction skipwhite skipempty
     syntax keyword qasmExtern extern nextgroup=qasmFunction skipwhite skipempty
     syntax keyword qasmJump break continue return
+    syntax keyword qasmJump case default
     syntax match qasmArrayDimensions /#dim/ contained
 endif
 
@@ -190,10 +191,11 @@ if s:openqasm_version >= 3
 endif
 
 "" Branching constructs.
-syntax keyword qasmConditional if nextgroup=qasmTest skipwhite skipempty
+syntax keyword qasmConditional if nextgroup=qasmTest skipwhite skipempty skipnl
 if s:openqasm_version >= 3
     syntax keyword qasmConditional else
-        \ nextgroup=@qasmStatementStart skipwhite skipempty
+        \ nextgroup=@qasmStatementStart skipwhite skipempty skipnl
+    syntax keyword qasmConditional switch nextgroup=qasmTest skipwhite skipempty skipnl
 endif
 
 
